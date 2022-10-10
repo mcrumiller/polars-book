@@ -72,6 +72,8 @@ multiple ways to get the same results. To get a better feel for them let's go th
 
 ### Count unique values
 
+#### In a column
+
 We can count the unique values in a column. Note that we are creating the same result in
 different ways. To avoid duplicate column names in the `DataFrame`, we could use an
 `alias` expression that can rename the expression.
@@ -92,6 +94,17 @@ print(out)
 ```text
 {{#include ../outputs/expressions/example_1.txt}}
 ```
+
+#### In a set of columns
+
+To count the number of unique *rows* in a column, we utilize the `struct` interface, which allows access to [multiple column values](https://pola-rs.github.io/polars-book/user-guide/dsl/custom_functions.html#combining-multiple-column-values).
+
+<div class="tabbed-blocks">
+
+```python
+{{#include ../examples/expressions/expressions_examples_1_cols.txt}}
+```   
+</div>
 
 ### Various aggregations
 
